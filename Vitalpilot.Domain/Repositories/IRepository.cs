@@ -8,7 +8,7 @@ using Vitalpilot.Domain.Filters;
 
 namespace Vitalpilot.Domain.Repositories
 {
-    public interface IRepository<T> where T : IBase
+    public interface IRepository<T> where T : class, IBase
     {
         /// <summary>
         /// Adds a single entity to the repository.
@@ -51,7 +51,7 @@ namespace Vitalpilot.Domain.Repositories
         /// </summary>
         /// <param name="filter">Query filter</param>
         /// <returns></returns>
-        Task<IEnumerable<T>> ListAsync(BaseFilter filter);
+        Task<IEnumerable<T>> ListAsync(BaseEntityFilter<T> filter);
 
         /// <summary>
         /// Finds an entity with primary key.
@@ -94,6 +94,6 @@ namespace Vitalpilot.Domain.Repositories
         /// <returns></returns>
         IQueryable<T> All(params Expression<Func<T, object>>[] includes);
 
-        Task<int> GetTotalCountAsync(BaseFilter filter);
+        Task<int> GetTotalCountAsync(BaseEntityFilter<T> filter);
     }
 }

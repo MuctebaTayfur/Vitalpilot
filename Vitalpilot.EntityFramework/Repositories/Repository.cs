@@ -93,18 +93,18 @@ namespace Vitalpilot.EntityFramework.Repositories
             Context.Set<TEntity>().RemoveRange(entities);
         }
 
-        public virtual async Task<IEnumerable<TEntity>> ListAsync(BaseFilter filter)
+        public virtual async Task<IEnumerable<TEntity>> ListAsync(BaseEntityFilter<TEntity> filter)
         {
             return await Context.Set<TEntity>()
-                .ApplyFilter((BaseEntityFilter<TEntity>)filter)
+                .ApplyFilter(filter)
                 .AsNoTracking()
                 .ToListAsync();
         }
 
-        public virtual async Task<int> GetTotalCountAsync(BaseFilter filter)
+        public virtual async Task<int> GetTotalCountAsync(BaseEntityFilter<TEntity> filter)
         {
             return await Context.Set<TEntity>()
-                .ApplyFilter((BaseEntityFilter<TEntity>)filter)
+                .ApplyFilter(filter)
                 .AsNoTracking()
                 .CountAsync();
         }
