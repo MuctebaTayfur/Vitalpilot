@@ -1,8 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Tenakth.D6.EntityFramework.Context.Configurations;
 using Vitalpilot.Domain.Models;
 using File = Vitalpilot.Domain.Models.File;
 
-namespace Tenakth.D6.EntityFramework.Context.Configurations;
+namespace Vitalpilot.EntityFramework.Context.Configuration.VitalPilot;
 
 public class FileConfiguration : BaseModelConfiguration<File>
 {

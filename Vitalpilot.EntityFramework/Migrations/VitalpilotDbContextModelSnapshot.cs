@@ -47,7 +47,7 @@ namespace Vitalpilot.EntityFramework.Migrations
                     b.Property<bool>("Deleted")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
-                        .HasDefaultValueSql("0");
+                        .HasDefaultValue(false);
 
                     b.Property<Guid>("DoctorId")
                         .HasColumnType("uniqueidentifier");
@@ -117,7 +117,7 @@ namespace Vitalpilot.EntityFramework.Migrations
                     b.Property<bool>("Deleted")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
-                        .HasDefaultValueSql("0");
+                        .HasDefaultValue(false);
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
@@ -188,7 +188,7 @@ namespace Vitalpilot.EntityFramework.Migrations
                     b.Property<bool>("Deleted")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
-                        .HasDefaultValueSql("0");
+                        .HasDefaultValue(false);
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
@@ -252,7 +252,7 @@ namespace Vitalpilot.EntityFramework.Migrations
                     b.Property<bool>("Deleted")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
-                        .HasDefaultValueSql("0");
+                        .HasDefaultValue(false);
 
                     b.Property<string>("FirstName")
                         .IsRequired()
@@ -328,7 +328,7 @@ namespace Vitalpilot.EntityFramework.Migrations
                     b.Property<bool>("Deleted")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
-                        .HasDefaultValueSql("0");
+                        .HasDefaultValue(false);
 
                     b.Property<string>("FileExtension")
                         .HasColumnType("nvarchar(max)");
@@ -391,7 +391,7 @@ namespace Vitalpilot.EntityFramework.Migrations
                     b.Property<bool>("Deleted")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
-                        .HasDefaultValueSql("0");
+                        .HasDefaultValue(false);
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
@@ -460,7 +460,7 @@ namespace Vitalpilot.EntityFramework.Migrations
                     b.Property<bool>("Deleted")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
-                        .HasDefaultValueSql("0");
+                        .HasDefaultValue(false);
 
                     b.Property<long>("FriendlyId")
                         .ValueGeneratedOnAdd()
@@ -525,7 +525,7 @@ namespace Vitalpilot.EntityFramework.Migrations
                     b.Property<bool>("Deleted")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
-                        .HasDefaultValueSql("0");
+                        .HasDefaultValue(false);
 
                     b.Property<DateTime?>("EndDate")
                         .HasColumnType("datetime2");
@@ -595,7 +595,7 @@ namespace Vitalpilot.EntityFramework.Migrations
                     b.Property<bool>("Deleted")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
-                        .HasDefaultValueSql("0");
+                        .HasDefaultValue(false);
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
@@ -656,7 +656,7 @@ namespace Vitalpilot.EntityFramework.Migrations
                     b.Property<bool>("Deleted")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
-                        .HasDefaultValueSql("0");
+                        .HasDefaultValue(false);
 
                     b.Property<string>("FirstName")
                         .IsRequired()
@@ -729,7 +729,7 @@ namespace Vitalpilot.EntityFramework.Migrations
                     b.Property<bool>("Deleted")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
-                        .HasDefaultValueSql("0");
+                        .HasDefaultValue(false);
 
                     b.Property<Guid>("DiseaseId")
                         .HasColumnType("uniqueidentifier");
@@ -793,7 +793,7 @@ namespace Vitalpilot.EntityFramework.Migrations
                     b.Property<bool>("Deleted")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
-                        .HasDefaultValueSql("0");
+                        .HasDefaultValue(false);
 
                     b.Property<long>("FriendlyId")
                         .ValueGeneratedOnAdd()
@@ -864,7 +864,7 @@ namespace Vitalpilot.EntityFramework.Migrations
                     b.Property<bool>("Deleted")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
-                        .HasDefaultValueSql("0");
+                        .HasDefaultValue(false);
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
@@ -928,7 +928,7 @@ namespace Vitalpilot.EntityFramework.Migrations
                     b.Property<bool>("Deleted")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
-                        .HasDefaultValueSql("0");
+                        .HasDefaultValue(false);
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
@@ -989,7 +989,7 @@ namespace Vitalpilot.EntityFramework.Migrations
                     b.Property<bool>("Deleted")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
-                        .HasDefaultValueSql("0");
+                        .HasDefaultValue(false);
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
@@ -1066,7 +1066,7 @@ namespace Vitalpilot.EntityFramework.Migrations
                     b.Property<bool>("Deleted")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
-                        .HasDefaultValueSql("0");
+                        .HasDefaultValue(false);
 
                     b.Property<string>("EmailAddress")
                         .IsRequired()
@@ -1140,7 +1140,7 @@ namespace Vitalpilot.EntityFramework.Migrations
                     b.Property<bool>("Deleted")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
-                        .HasDefaultValueSql("0");
+                        .HasDefaultValue(false);
 
                     b.Property<long>("FriendlyId")
                         .ValueGeneratedOnAdd()
@@ -1211,7 +1211,7 @@ namespace Vitalpilot.EntityFramework.Migrations
                     b.Property<bool>("Deleted")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
-                        .HasDefaultValueSql("0");
+                        .HasDefaultValue(false);
 
                     b.Property<long>("FriendlyId")
                         .ValueGeneratedOnAdd()

@@ -43,7 +43,6 @@ namespace Vitalpilot.EntityFramework.Context
                         break;
 
                     case EntityState.Deleted:
-                        // await ValidateBeforeSofDeleteAsync(entry);
 
                         entry.State = EntityState.Unchanged;
                         entry.Property(nameof(IBase.LastModifiedDate)).CurrentValue = DateTime.Now;

@@ -27,7 +27,7 @@ public abstract class BaseModelConfiguration<TEntity> : IEntityTypeConfiguration
         // LastModifiedBy
         builder.Property(b => b.LastModifiedBy).IsRequired().HasMaxLength(100);
         // Deleted
-        builder.Property(b => b.Deleted).IsRequired().HasDefaultValueSql("0");
+        builder.Property(b => b.Deleted).IsRequired().HasDefaultValue(false);
         // RowVersion
         builder.Property(b => b.RowVersion).IsRequired().IsConcurrencyToken().ValueGeneratedOnAddOrUpdate().IsRowVersion();
     }
