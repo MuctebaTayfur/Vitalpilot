@@ -263,7 +263,7 @@ paket-files/
 __pycache__/
 *.pyc
 
-/Warepilot.Client/node_modules/*
-/Warepilot.Client/.angular/*
-/Warepilot.Client/dist/*
-/Warepilot.Client/.vscode/
+/Vitalpilot.Client/node_modules/*
+/Vitalpilot.Client/.angular/*
+/Vitalpilot.Client/dist/*
+/Vitalpilot.Client/.vscode/
