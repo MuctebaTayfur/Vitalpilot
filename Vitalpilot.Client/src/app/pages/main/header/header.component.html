@@ -1,0 +1,36 @@
+<mat-toolbar>
+    <div>
+        <h1>Vitalpilot</h1>
+    </div>
+
+    <span class="title-spacer"></span>
+
+    <div class="button-row">
+        <a mat-button routerLinkActive="active-router-button" [routerLink]="['my-appointments']">
+            <mat-icon aria-hidden="true">event</mat-icon>
+            My Appointments
+        </a>
+
+        <a mat-button routerLinkActive="active-router-button" [routerLink]="['my-diseases']">
+            <mat-icon>
+                personal_injury
+            </mat-icon>
+            My Diseases
+        </a>
+
+        <a mat-button routerLinkActive="active-router-button" [routerLink]="['my-reports']">
+            <mat-icon>
+                description
+            </mat-icon>
+            My Reports
+        </a>
+
+        <a mat-button routerLinkActive="active-router-button" [routerLink]="['my-prescriptions']">
+
+            <mat-icon class="material-symbols-outlined">
+                receipt_long
+            </mat-icon>
+            My Prescriptions
+        </a>
+    </div>
+</mat-toolbar>

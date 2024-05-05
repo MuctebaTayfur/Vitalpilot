@@ -1,0 +1,17 @@
+.menu-spacer {
+  flex: 1 1 auto;
+}
+
+.title-spacer {
+  padding-right: 2rem;
+}
+
+.button-row {
+  display: table-cell;
+  max-width: 600px;
+}
+
+.active-router-button {
+  background-color: rgb(67, 175, 246);
+  color: whitesmoke !important;
+}
