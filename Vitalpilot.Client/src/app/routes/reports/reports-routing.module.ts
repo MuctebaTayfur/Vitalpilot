@@ -6,7 +6,7 @@ import { ReportListComponent } from "./components/report-list/report-list.compon
 
 const routes: Routes = [
     {
-        path: "",
+        path: '',
         component: ReportsComponent,
         children: [
             {
@@ -15,7 +15,7 @@ const routes: Routes = [
                 redirectTo: 'list',
             },
             {
-                path: "list",
+                path: 'list',
                 component: ReportListComponent
             }
         ]

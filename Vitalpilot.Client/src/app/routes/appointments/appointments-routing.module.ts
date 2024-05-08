@@ -6,7 +6,7 @@ import { NgModule } from "@angular/core";
 
 const routes: Routes = [
     {
-        path: "",
+        path: '',
         component: AppointmentsComponent,
         children: [
             {
@@ -15,7 +15,7 @@ const routes: Routes = [
                 redirectTo: 'list',
             },
             {
-                path: "list",
+                path: 'list',
                 component: AppointmentListComponent
             }
         ]

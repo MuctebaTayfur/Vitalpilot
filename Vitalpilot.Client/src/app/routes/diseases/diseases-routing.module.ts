@@ -6,7 +6,7 @@ import { DiseaseListComponent } from "./components/disease-list/disease-list.com
 
 const routes: Routes = [
     {
-        path: "",
+        path: '',
         component: DiseasesComponent,
         children: [
             {
@@ -15,7 +15,7 @@ const routes: Routes = [
                 redirectTo: 'list',
             },
             {
-                path: "list",
+                path: 'list',
                 component: DiseaseListComponent
             }
         ]

@@ -16,17 +16,14 @@ import { PrescriptionsComponent } from './routes/prescriptions/prescriptions.com
   declarations: [
     AppComponent,
     MainComponent,
-    LoginComponent,
-    DiseasesComponent,
-    ReportsComponent,
-    PrescriptionsComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     RouterModule,
     SharedModule,
-    BrowserAnimationsModule
-  
+    BrowserAnimationsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

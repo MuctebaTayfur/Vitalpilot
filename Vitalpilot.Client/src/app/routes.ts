@@ -1,19 +1,30 @@
-import { NgModule } from "@angular/core";
 import { Routes } from "@angular/router";
 import { LoginComponent } from "./pages/login/login.component";
 import { MainComponent } from "./pages/main/main.component";
-import { AppointmentsComponent } from "./routes/appointments/appointments.component";
-import { DiseasesComponent } from "./routes/diseases/diseases.component";
-import { ReportsComponent } from "./routes/reports/reports.component";
-import { PrescriptionsComponent } from "./routes/prescriptions/prescriptions.component";
-import { AppointmentsModule } from "./routes/appointments/appointments.module";
 
-export const routes:Routes=[
-    {path:'login',component:LoginComponent},
-    {path:'',component:MainComponent,children:[
-        {path:'my-appointments',component:AppointmentsModule},
-        {path:'my-diseases',component:DiseasesComponent},
-        {path:'my-reports',component:ReportsComponent},
-        {path:'my-prescriptions',component:PrescriptionsComponent}
-    ]}
- ]
+const routes: Routes = [
+    { path: 'login', component: LoginComponent },
+    {
+        path: '', component: MainComponent, children: [
+            {
+                path: 'my-appointments', loadChildren: () =>
+                    import('./routes/appointments/appointments.module').then(x => x.AppointmentsModule)
+            },
+            {
+                path: 'my-diseases', loadChildren: () =>
+                    import('./routes/diseases/diseases.module').then(x => x.DiseasesModule)
+            },
+            {
+                path: 'my-reports', loadChildren: () =>
+                    import('./routes/prescriptions/prescriptions.module').then(x => x.PrescriptionsModule)
+            },
+            {
+                path: 'my-prescriptions', loadChildren: () =>
+                    import('./routes/reports/reports.module').then(x => x.ReportsModule)
+            },
+
+
+        ]
+    }
+]
+export default routes;

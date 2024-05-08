@@ -6,7 +6,7 @@ import { PrescriotionListComponent } from "./components/prescriotion-list/prescr
 
 const routes: Routes = [
     {
-        path: "",
+        path: '',
         component: PrescriptionsComponent,
         children: [
             {
@@ -15,7 +15,7 @@ const routes: Routes = [
                 redirectTo: 'list',
             },
             {
-                path: "list",
+                path: 'list',
                 component: PrescriotionListComponent
             }
         ]
