@@ -4,8 +4,10 @@ import { SharedModule } from "src/app/shared/shared.module";
 import { AppointmentsRoutingModule } from "./appointments-routing.module";
 
 @NgModule({
-    declarations:[AppointmentsComponent],
+    declarations:[AppointmentsComponent,],
     imports:[SharedModule,AppointmentsRoutingModule],
     exports:[AppointmentsComponent]
 })
-export class AppointmentsModule{}
+export class AppointmentsModule{
+  
+}

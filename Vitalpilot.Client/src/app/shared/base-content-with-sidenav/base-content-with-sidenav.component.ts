@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { LeftNavLink } from '../models/leftNavLink';
 
 @Component({
   selector: 'app-base-content-with-sidenav',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./base-content-with-sidenav.component.scss']
 })
 export class BaseContentWithSidenavComponent {
-
+  @Input() links!: Array<LeftNavLink>;
 }

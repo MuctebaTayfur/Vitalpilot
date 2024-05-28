@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./appointments.component.scss']
 })
 export class AppointmentsComponent {
-
+  links = [
+    {
+      path: './list',
+      icon: 'format_list_bulleted',
+      title: 'Appointments',
+      rightRequired: null
+    },
+    {
+      path: './create',
+      icon: 'add',
+      title: 'New Appointment',
+      rightRequired: null
+    }
+  ]
 }

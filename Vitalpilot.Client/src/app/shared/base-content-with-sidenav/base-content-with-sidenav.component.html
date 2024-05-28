@@ -1,1 +1,24 @@
-<p>base-content-with-sidenav works!</p>
+<div class="body-container">
+  <mat-drawer-container>
+
+    <mat-drawer class="sidenav" mode="side" opened>
+      <div class="left-nav">
+        <div *ngFor="let link of links">
+          <a class="nav-link" [routerLink]="link.path" routerLinkActive="active" clas mat-button>
+            <mat-icon>{{ link.icon }}</mat-icon>
+            {{ link.title }}
+          </a>
+        </div>
+      </div>
+    </mat-drawer>
+
+    <mat-drawer-content class="content">
+      <mat-card appearance="outlined" class="content-mat-card">
+        <mat-card-content>Simple card
+          <router-outlet></router-outlet>
+        </mat-card-content>
+      </mat-card>
+    </mat-drawer-content>
+    
+  </mat-drawer-container>
+</div>

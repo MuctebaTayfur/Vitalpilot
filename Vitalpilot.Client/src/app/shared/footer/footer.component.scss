@@ -1,0 +1,24 @@
+.footer {
+    background-color:rgb(231, 225, 225);
+    padding: 20px;
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    white-space: nowrap;
+    width: 100%;
+    border-top: solid 0.1rem;
+    border-color: rgba(0, 0, 0, 0.199);
+	z-index: 100;
+    font-size: medium;
+    position:fixed;
+
+
+}
+
+.copy-rigth {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+
+}

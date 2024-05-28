@@ -7,19 +7,19 @@ const routes: Routes = [
     {
         path: '', component: MainComponent, children: [
             {
-                path: 'my-appointments', loadChildren: () =>
+                path: 'appointments', loadChildren: () =>
                     import('./routes/appointments/appointments.module').then(x => x.AppointmentsModule)
             },
             {
-                path: 'my-diseases', loadChildren: () =>
+                path: 'diseases', loadChildren: () =>
                     import('./routes/diseases/diseases.module').then(x => x.DiseasesModule)
             },
             {
-                path: 'my-reports', loadChildren: () =>
+                path: 'reports', loadChildren: () =>
                     import('./routes/prescriptions/prescriptions.module').then(x => x.PrescriptionsModule)
             },
             {
-                path: 'my-prescriptions', loadChildren: () =>
+                path: 'prescriptions', loadChildren: () =>
                     import('./routes/reports/reports.module').then(x => x.ReportsModule)
             },
 
