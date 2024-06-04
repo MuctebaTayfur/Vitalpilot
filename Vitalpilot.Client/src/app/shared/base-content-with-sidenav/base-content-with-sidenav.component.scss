@@ -1,14 +1,16 @@
 .mat-drawer-container {
-  
     width: 100%;
     height: 100%;
     flex: 1;
-    position: fixed; 
+    position: fixed;
+    padding: 1rem;
 }
-.body-container{
-    position: relative;
+
+.body-container {
     z-index: 0;
+    position: relative;
 }
+
 .sidenav {
     width: 12%;
 }
@@ -18,7 +20,7 @@
 }
 
 .left-nav {
-    position: absolute;
+    position: relative;
     top: 6px;
     width: 100%;
 }
@@ -30,8 +32,12 @@
 }
 
 .content-mat-card {
-    margin: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 7rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
     padding: 1rem;
     flex: 1;
-  
+    overflow: visible;
+
 }

@@ -1,7 +1,7 @@
 .footer {
     background-color:rgb(231, 225, 225);
     padding: 20px;
-    position: absolute;
+    position: fixed;
     display: flex;
     bottom: 0;
     white-space: nowrap;
@@ -10,7 +10,6 @@
     border-color: rgba(0, 0, 0, 0.199);
 	z-index: 100;
     font-size: medium;
-    position:fixed;
 
 
 }
