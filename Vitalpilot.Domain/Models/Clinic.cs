@@ -3,18 +3,17 @@
     public partial class Clinic : Base<Clinic>, IBase
     {
         public Clinic(Guid hospitalId,
-            Guid name,
+            string name,
             bool isActive,
-            string? description,
-            string? hostpitalSection)
+            string? description)
         {
             this.HospitalId = hospitalId;
             this.Name = name;
             this.Description = description;
             this.IsActive = isActive;
-            this.HostpitalSection = hostpitalSection;
 
             Doctors = new HashSet<Doctor>();
+            Appointments = new HashSet<Appointment>();
         }
 
         public override Clinic CreateNew()
@@ -22,8 +21,7 @@
             return new Clinic(this.HospitalId,
                 this.Name,
                 this.IsActive,
-                this.Description,
-                this.HostpitalSection);
+                this.Description);
         }
 
         public override void Update(Clinic entity)
@@ -32,7 +30,6 @@
             this.Name = entity.Name;
             this.Description = entity.Description;
             this.IsActive = entity.IsActive;
-            this.HostpitalSection = entity.HostpitalSection;
         }
 
         public override void Delete()

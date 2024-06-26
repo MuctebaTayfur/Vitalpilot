@@ -15,12 +15,12 @@ namespace Vitalpilot.Domain.Models
         public bool Deleted { get; private set; }
         public byte[] RowVersion { get; private set; } = null!;
         public Guid HospitalId { get; private set; }
-        public Guid Name { get; private set; }
+        public string Name { get; private set; }
         public string? Description { get; private set; }
         public bool IsActive { get; private set; }
-        public string? HostpitalSection { get; private set; }
 
         public virtual ICollection<Doctor> Doctors { get; private set; }
+        public virtual ICollection<Appointment> Appointments { get; private set; }
         public Hospital Hospital { get; private set; }
     }
 }

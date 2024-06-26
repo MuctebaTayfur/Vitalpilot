@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Vitalpilot.EntityFramework.Context;
 
@@ -11,9 +12,11 @@ using Vitalpilot.EntityFramework.Context;
 namespace Vitalpilot.EntityFramework.Migrations
 {
     [DbContext(typeof(VitalpilotDbContext))]
-    partial class VitalpilotDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240610095049_clinic_update")]
+    partial class clinic_update
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,9 +33,6 @@ namespace Vitalpilot.EntityFramework.Migrations
 
                     b.Property<DateTime>("AppointmentDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<Guid>("ClinicId")
-                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("CreatedBy")
                         .IsRequired()
@@ -91,8 +91,6 @@ namespace Vitalpilot.EntityFramework.Migrations
 
                     b.HasKey("UniqueId");
 
-                    b.HasIndex("ClinicId");
-
                     b.HasIndex("DoctorId");
 
                     b.HasIndex("PatienceId");
@@ -135,6 +133,9 @@ namespace Vitalpilot.EntityFramework.Migrations
 
                     b.Property<Guid>("HospitalId")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("HostpitalSection")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
@@ -1264,11 +1265,6 @@ namespace Vitalpilot.EntityFramework.Migrations
 
             modelBuilder.Entity("Vitalpilot.Domain.Models.Appointment", b =>
                 {
-                    b.HasOne("Vitalpilot.Domain.Models.Clinic", "Clinic")
-                        .WithMany("Appointments")
-                        .HasForeignKey("ClinicId")
-                        .IsRequired();
-
                     b.HasOne("Vitalpilot.Domain.Models.Doctor", "Doctor")
                         .WithMany("Appointments")
                         .HasForeignKey("DoctorId")
@@ -1278,8 +1274,6 @@ namespace Vitalpilot.EntityFramework.Migrations
                         .WithMany("Appointments")
                         .HasForeignKey("PatienceId")
                         .IsRequired();
-
-                    b.Navigation("Clinic");
 
                     b.Navigation("Doctor");
 
@@ -1451,8 +1445,6 @@ namespace Vitalpilot.EntityFramework.Migrations
 
             modelBuilder.Entity("Vitalpilot.Domain.Models.Clinic", b =>
                 {
-                    b.Navigation("Appointments");
-
                     b.Navigation("Doctors");
                 });
 

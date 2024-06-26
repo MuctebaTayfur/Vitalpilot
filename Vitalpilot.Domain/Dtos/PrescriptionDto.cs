@@ -2,7 +2,7 @@
 
 namespace Vitalpilot.Domain.Dtos
 {
-    public class PrescriptionDto : IDto
+    public class PrescriptionDto : BaseEntityDto
     {
         public Guid PatienceId { get; set; }
         public Guid AppointmentId { get; set; }

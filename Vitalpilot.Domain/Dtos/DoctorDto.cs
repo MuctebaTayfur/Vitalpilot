@@ -3,7 +3,7 @@ using Vitalpilot.Domain.Dtos.Interfaces;
 
 namespace Vitalpilot.Domain.Dtos
 {
-    public class DoctorDto : IDto
+    public class DoctorDto : BaseEntityDto
     {
         [Required]
         public string FirstName { get; set; } = null!;

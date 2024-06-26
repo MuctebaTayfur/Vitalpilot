@@ -1,1 +1,44 @@
-<p>appointment-list works!</p>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z0">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="appointmentDate">
+        <th mat-header-cell *matHeaderCellDef> Appointment Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.appointmentDate}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="doctor">
+        <th mat-header-cell *matHeaderCellDef> Doctor </th>
+        <td mat-cell *matCellDef="let element"> {{element.doctor}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="clinic">
+        <th mat-header-cell *matHeaderCellDef> Clinic </th>
+        <td mat-cell *matCellDef="let element"> {{element.clinic}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="hospital">
+        <th mat-header-cell *matHeaderCellDef> Hospital </th>
+        <td mat-cell *matCellDef="let element"> {{element.hospital}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef> status </th>
+        <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> Actions </th>
+        <td mat-cell *matCellDef="let element"> sil </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

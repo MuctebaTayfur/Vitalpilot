@@ -3,7 +3,7 @@ using Vitalpilot.Domain.Dtos.Interfaces;
 
 namespace Vitalpilot.Domain.Dtos
 {
-    public class UserRoleDto : IDto
+    public class UserRoleDto : BaseEntityDto
     {
         [Required]
         public Guid RoleId { get; set; }

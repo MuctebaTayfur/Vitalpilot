@@ -19,8 +19,10 @@ namespace Vitalpilot.Domain.Models
         public Guid DoctorId { get; private set; }
         public string? PatienceHistory { get; private set; }
         public int Status { get; private set; }
+        public Guid ClinicId { get; set; }
 
         public Patience Patience { get; private set; } = null!;
         public Doctor Doctor { get; private set; } = null!;
+        public Clinic Clinic { get; private set; } = null!;
     }
 }

@@ -12,6 +12,10 @@ namespace Vitalpilot.EntityFramework.Context
     {
         private readonly IConfiguration _configuration;
 
+        public VitalpilotDbContext()
+        {
+        }
+
         public VitalpilotDbContext(DbContextOptions<VitalpilotDbContext> options, IConfiguration configuration) : base(options)
         {
             _configuration = configuration;
@@ -87,6 +91,11 @@ namespace Vitalpilot.EntityFramework.Context
                 entity.HasOne(x => x.Patience)
                 .WithMany(x => x.Appointments)
                 .HasForeignKey(x => x.PatienceId)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+
+                entity.HasOne(x => x.Clinic)
+                .WithMany(x => x.Appointments)
+                .HasForeignKey(x => x.ClinicId)
                 .OnDelete(DeleteBehavior.ClientSetNull);
             });
 

@@ -6,6 +6,6 @@ namespace Vitalpilot.Domain.Dtos
     {
         public Guid UniqueId { get; internal set; }
 
-        public Guid FriendlyId { get; internal set; }
+        public long FriendlyId { get; internal set; }
     }
 }

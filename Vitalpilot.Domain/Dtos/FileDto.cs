@@ -3,7 +3,7 @@ using Vitalpilot.Domain.Dtos.Interfaces;
 
 namespace Vitalpilot.Domain.Dtos
 {
-    public class FileDto : IDto
+    public class FileDto : BaseEntityDto
     {
         [Required]
         public Guid FileTypeId { get; set; }

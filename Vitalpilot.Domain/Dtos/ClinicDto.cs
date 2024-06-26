@@ -3,19 +3,17 @@ using Vitalpilot.Domain.Dtos.Interfaces;
 
 namespace Vitalpilot.Domain.Dtos
 {
-    public class ClinicDto : IDto
+    public class ClinicDto : BaseEntityDto
     {
         [Required]
         public Guid HospitalId { get; set; }
 
         [Required]
-        public Guid Name { get; set; }
+        public string Name { get; set; } = null!;
 
         [Required]
         public bool IsActive { get; set; }
 
         public string? Description { get; set; }
-
-        public string? HostpitalSection { get; set; }
     }
 }

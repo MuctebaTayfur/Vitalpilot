@@ -9,7 +9,7 @@ using Vitalpilot.Domain.Services;
 
 namespace Vitalpilot.API.Controllers
 {
-    public class UserController(IService<User, IRepository<User>, BaseResponse<User>> service, IRepository<User> repository, IMapper mapper) : BaseEntityController<User, UserDto, EntityFilter<User>>(repository, service, mapper)
+    public class DoctorController(IService<Doctor, IRepository<Doctor>, BaseResponse<Doctor>> service, IRepository<Doctor> repository, IMapper mapper) : BaseEntityController<Doctor, DoctorDto, EntityFilter<Doctor>>(repository, service, mapper)
     {
     }
 }

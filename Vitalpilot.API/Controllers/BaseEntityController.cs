@@ -14,7 +14,7 @@ using Vitalpilot.Domain.Services;
 namespace Vitalpilot.API.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class BaseEntityController<TEntity, TResource, TFilter> : ControllerBase
         where TEntity : Base<TEntity>, IBase
         where TResource : IDto

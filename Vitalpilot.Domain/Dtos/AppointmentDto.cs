@@ -3,7 +3,7 @@ using Vitalpilot.Domain.Dtos.Interfaces;
 
 namespace Vitalpilot.Domain.Dtos
 {
-    public class AppointmentDto : IDto
+    public class AppointmentDto : BaseEntityDto
     {
         [Required]
         public DateTime AppointmentDate { get; set; }

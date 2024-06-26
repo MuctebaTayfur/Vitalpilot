@@ -3,12 +3,12 @@
     height: 100%;
     flex: 1;
     position: fixed;
-    padding: 1rem;
 }
 
 .body-container {
     z-index: 0;
     position: relative;
+   
 }
 
 .sidenav {
@@ -32,12 +32,10 @@
 }
 
 .content-mat-card {
-    margin-top: 1rem;
-    margin-bottom: 7rem;
-    margin-right: 1rem;
-    margin-left: 1rem;
-    padding: 1rem;
     flex: 1;
     overflow: visible;
-
+    margin-top:  3rem;
+    margin-left:  3rem;
+    margin-right:  3rem;
+    margin-bottom:  10rem;
 }
