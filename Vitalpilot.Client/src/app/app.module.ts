@@ -7,10 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppointmentsComponent } from './routes/appointments/appointments.component';
-import { DiseasesComponent } from './routes/diseases/diseases.component';
-import { ReportsComponent } from './routes/reports/reports.component';
-import { PrescriptionsComponent } from './routes/prescriptions/prescriptions.component';
 
 @NgModule({
   declarations: [

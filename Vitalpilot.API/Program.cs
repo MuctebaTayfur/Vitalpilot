@@ -27,7 +27,10 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddCors(options =>
 {
-    options.AddDefaultPolicy(op => { op.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader(); });
+    options.AddPolicy("AllowSpecificOrigin",
+        builder => builder.WithOrigins("http://localhost:4200")
+                          .AllowAnyMethod()
+                          .AllowAnyHeader());
 });
 
 var app = builder.Build();
@@ -37,10 +40,9 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
 
-if (!app.Environment.IsDevelopment())
-{
-    app.UseHttpsRedirection();
-}
+app.UseHttpsRedirection();
+
+app.UseCors("AllowSpecificOrigin");
 
 app.UseAuthorization();
 
